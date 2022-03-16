@@ -1,9 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,700&display=swap');
+
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
+
+    /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    font-family: 'Archivo', sans-serif;
+}
+
+html{
+  font-size: 62.5%;
 }
 
 a {
@@ -13,4 +27,134 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Archivo', sans-serif;
+
+}
+
+
+/* Commom Css */
+
+
+
+
+
+
+
+.button{
+    background-color: #000;
+    padding: 1rem;
+    color: white;
+    height: 6.8rem;
+    font-size: 1.8rem;
+    width: 19.8rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+
+
+
+.main-head{
+  background-color: #000;
+  color: white;
+
+}
+.main-head .top
+{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* main header page style */
+
+header{
+  display: flex;
+  background-color: rgba(249,246,241,255);
+}
+.left{
+  width: 50%;
+  padding-left: 170px;
+}
+.right{
+  width: 50%;
+  z-index: 1;
+  height: 100vh;
+}
+.right img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Camps page style  */
+
+
+.search{
+  background-color: rgba(249,246,241,255);
+}
+
+
+
+
+.camp{
+  border: 1px solid gray;
+  /* width: 30%; */
+  /* grid-gap: 1rem; */
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  border-radius: 10px;
+
+  /* align-items: center; */
+}
+.camp h2{
+  /* font-size: 3rem; */
+}
+.camp_image{
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.view_Camp_button{
+  width: 100%;
+  background-color: #fff;
+  color: #111;
+  border: 1px solid gray;
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+.view_Camp_button:hover{
+  /* width: 100%; */
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Log IN Page css */
+
+.log_in_submit ,.add_new_submit{
+  width: 90%;
+
+}
+ 
+.login_right{
+  background-color: rgba(249,246,241,255);
 }
