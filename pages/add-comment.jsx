@@ -2,7 +2,9 @@ import React from 'react'
 import ProjectDetail from '../components/project-detail'
 import Footer from '../components/footer'
 import Header from '../components/header'
-import {useRouter} from 'next/router'
+// import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
+
 
 
 function AddComment() {
