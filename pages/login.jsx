@@ -1,9 +1,29 @@
-import React from 'react'
+import React , {useState} from 'react'
 import Logo from '../components/logo'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+
+
 
 function Login() {
+    const router = useRouter()
+    const [username,setUsername] = useState('')
+    const [password,setPassword] = useState('')
+    const [wrong,setwrong] = useState(false)
+    const submit = (e) =>{
+        e.preventDefault()
+            if(username == 'abc' && password=='abc'){
+                localStorage.setItem('user','abc')
+                console.log('sucess');
+                router.push('/home')
+            }else{
+                setwrong(true)
+                setTimeout(() => {
+                    setwrong(false)
+                }, 5000);
+            }
+    }
   return (
       <>
         <div className="login flex">
@@ -11,18 +31,25 @@ function Login() {
                 <div className="header flex justify-between items-center ">
                     <Logo/>
                     <Link href='/home'>
-                        <a className='text-3xl text-gray-500' href="">Back to Camp-grounds</a>
+                        <a className='text-3xl text-gray-500' href=""> Back to Camp-grounds</a>
                     </Link>
                 </div>
                 <h1 className='text-7xl font-bold mt-40' >Start exploring camps from all around the world</h1>
+                <h2 className='text-4xl mt-4 bg-slate-400 p-2'>Use: Username = abc & password = abc</h2>
                 <form  className='flex flex-col mt-8'>
                     <label className='text-4xl mt-12' htmlFor="">User Name</label>
-                    <input className='mt-4 w-11/12 text-4xl text-black p-4 bg-gray-100 h-24' type="text" placeholder='johndoe_91' />
+                    <input onChange={(e)=>{setUsername(e.target.value)}} className='mt-4 w-11/12 text-4xl text-black p-4 bg-gray-100 h-24' type="text" placeholder='johndoe_91' />
 
                     <label className='text-4xl mt-12' htmlFor="">Password</label>
-                    <input className='mt-4 w-11/12 text-4xl bg-gray-100  p-4 h-24' type="text" placeholder='Enter Your Password' />
-                    <button className="rounded-2xl log_in_submit button mt-20 w-full">Login</button>
+                    <input onChange={(e)=>{setPassword(e.target.value)}} className='mt-4 w-11/12 text-4xl bg-gray-100  p-4 h-24' type="text" placeholder='Enter Your Password' />
+                    <button onClick={submit} className="rounded-2xl log_in_submit button mt-20 w-full">Login</button>
                 </form>
+                {
+                    wrong?
+                <h2 className='text-4xl mt-4 bg-slate-500 p-2' >Wront Credentials .. PLease Use: Username = abc & password = abc </h2>
+                :''
+                }
+
                 <p className='mt-4 text-3xl text-gray-500'>Not a user yet <Link href="/sign-up"><a className='font-bold text-sky-900 ' >Create an account</a></Link></p>
             </div>
 

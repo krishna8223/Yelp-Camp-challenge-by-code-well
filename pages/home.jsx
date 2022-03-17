@@ -1,9 +1,9 @@
 import React ,{useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import ProjectDetail from '../components/project-detail'
 import Camp_card from '../components/camp_card'
 import camps from '../camps'
+import ProjectDetail from '../components/project-detail'
 import Footer from '../components/footer'
 import Header from '../components/header'
 function Home() {
@@ -12,15 +12,14 @@ function Home() {
 
     const submit=(e)=>{
             e.preventDefault()
-        let camp = camps.filter(function (e) {
-            return e.name == search;
-        })
-        ;
+        // let camp = camps.filter(function (e) {
+        //     return e.name == search;
+        // })
+        // ;
 
-        camps=camp
-        console.log(camps);
+        // camps=camp
+        // console.log(camps);
     }
-    // console.log(camp);
     return (
         <>
             <ProjectDetail/>

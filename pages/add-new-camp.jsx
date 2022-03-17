@@ -2,9 +2,17 @@ import React from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import ProjectDetail from '../components/project-detail'
+import { useRouter } from 'next/router'
 
 
 function addNewCamp() {
+    const router = useRouter()
+
+    const submit = (e) =>{
+        e.preventDefault()
+        router.push('/home')
+    }
+
     return (
         <>
                 <ProjectDetail />
@@ -22,7 +30,7 @@ function addNewCamp() {
                     <input className='mt-6 w-11/12 text-4xl text-black p-8 bg-gray-100 h-24' type="text" placeholder='www.image.com' />
                     <label className='text-gray-500 text-4xl mt-12' htmlFor="">Description</label>
                     <textarea placeholder='Enter campground detail' className='mt-6 w-11/12 text-4xl text-black p-4 bg-gray-100 h-60' ></textarea>
-                    <button className="rounded-2xl add_new_submit button mt-20 w-full">Add new campground</button>
+                    <button onClick={submit} className="rounded-2xl add_new_submit button mt-20 w-full">Add new campground</button>
                 </form>
             </div>
 

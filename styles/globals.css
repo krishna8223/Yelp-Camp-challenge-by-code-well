@@ -150,11 +150,17 @@ header{
 
 /* Log IN Page css */
 
-.log_in_submit ,.add_new_submit{
+.log_in_submit ,.add_new_submit {
   width: 90%;
 
 }
  
 .login_right{
   background-color: rgba(249,246,241,255);
+}
+
+
+
+.add_comment_submit{
+  width: 100%;
 }

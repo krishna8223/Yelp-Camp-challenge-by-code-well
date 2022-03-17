@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 import Footer from '../../components/footer'
 import Header from '../../components/header'
@@ -56,7 +57,11 @@ function Camp() {
                     <Comment/>
                     <Comment/>
                     <Comment/>
+                    <div className='flex justify-end'>
+                    <Link href='/add-comment'>
                     <button  className=' mt-16 button'>Leave a Review</button>
+                    </Link>
+                    </div>
                 </div>
                 </div>
                 </div>

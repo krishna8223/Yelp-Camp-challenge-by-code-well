@@ -7,8 +7,7 @@ function ProjectDetail() {
     <div className="main-head bg-black">
 
     <div className=" container  top text-center text-white flex justify-center p-4 text-3xl ">
-    This Project was made by <a href="">Krishna verma </a> and design by  <a href=""> Codewell</a>
-    <img className='ml-24' src="/Close.svg" alt="" />
+    This Project was made by <a target='_blank' rel="noreferrer" className='text-cyan-500' href="https://github.com/krishna8223">Krishna verma </a>  and design by  <a target='_blank' rel="noreferrer" className='text-cyan-500' href="https://www.codewell.cc/"> Codewell</a>
 </div>
 </div>
    </>

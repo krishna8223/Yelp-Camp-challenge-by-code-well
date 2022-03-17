@@ -2,8 +2,14 @@ import React from 'react'
 import Logo from '../components/logo'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 function Login() {
+    const router = useRouter()
+    const submit = (e) =>{
+        e.preventDefault()
+        router.push('/login')
+    }
   return (
       <>
         <div className="login flex">
@@ -21,7 +27,7 @@ function Login() {
 
                     <label className='text-4xl mt-12' htmlFor="">Password</label>
                     <input className='mt-4 w-11/12 text-4xl bg-gray-100  p-4 h-24' type="text" placeholder='Enter Your Password' />
-                    <button className="rounded-2xl log_in_submit button mt-20 w-full">Login</button>
+                    <button onClick={submit} className="rounded-2xl log_in_submit button mt-20 w-full">Login</button>
                 </form>
                 <p className='mt-4 text-3xl text-gray-500'>Already a user <Link href="/login"><a className='font-bold text-sky-900 ' >Sign IN</a></Link></p>
             </div>
