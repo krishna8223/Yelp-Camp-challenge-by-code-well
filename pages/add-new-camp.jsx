@@ -5,7 +5,7 @@ import ProjectDetail from '../components/project-detail'
 import { useRouter } from 'next/router'
 
 
-function addNewCamp() {
+function AddNewCamp() {
     const router = useRouter()
 
     const submit = (e) =>{
@@ -39,4 +39,4 @@ function addNewCamp() {
     )
 }
 
-export default addNewCamp
+export default AddNewCamp
