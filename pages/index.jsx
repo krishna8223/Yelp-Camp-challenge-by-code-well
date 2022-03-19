@@ -40,7 +40,7 @@ export default function Home() {
               </li>
             </ul>
             <Link href='/home'>
-            <button className="button mt-10">Vie Campgrounds</button>
+            <button className="button mt-10">View Campgrounds</button>
             </Link>
             <p className="partners_with text-3xl text-gray-600 mt-10">
               Partnered With:
