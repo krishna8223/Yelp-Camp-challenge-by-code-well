@@ -57,7 +57,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="order-1 mt-52   lg:mt-0 right w-full lg:w-2/4">
+        <div className="order-1 mt-52    lg:mt-0 right w-full lg:w-2/4">
           <img src="/Hero Image.jpg" alt="Image" />
         </div>
       </header>
