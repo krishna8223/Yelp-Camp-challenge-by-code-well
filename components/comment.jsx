@@ -9,7 +9,7 @@ function Comment() {
           <h2 className='font-bold'>Adam Jones</h2>
           <h2>13h ago</h2>
       </div>
-      <p>Honestly oe of the best experience every,took us a while to figure out how to get there but it waas amazing</p>
+      <p className='leading-snug tracking-wider'>Honestly oe of the best experience every,took us a while to figure out how to get there but it waas amazing</p>
       </div>
       </>
   )

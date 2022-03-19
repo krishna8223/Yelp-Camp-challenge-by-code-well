@@ -10,9 +10,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
-
-    /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
     font-family: 'Archivo', sans-serif;
 }
 
@@ -34,12 +31,6 @@ a {
 
 /* Commom Css */
 
-
-
-
-
-
-
 .button{
     background-color: #000;
     padding: 1rem;
@@ -59,9 +50,6 @@ a {
   margin: auto;
 }
 
-
-
-
 .main-head{
   background-color: #000;
   color: white;
@@ -78,17 +66,21 @@ a {
 /* main header page style */
 
 header{
-  display: flex;
   background-color: rgba(249,246,241,255);
 }
-.left{
-  width: 50%;
-  padding-left: 170px;
+
+.logo{
+  height: fit-content;
+    position: absolute;
+    top: 0;
 }
-.right{
-  width: 50%;
-  z-index: 1;
-  height: 100vh;
+
+
+
+@media(max-width:1024px){
+  .right{
+    height: 50vh;
+  }
 }
 .right img{
   width: 100%;
@@ -107,20 +99,14 @@ header{
 
 .camp{
   border: 1px solid gray;
-  /* width: 30%; */
-  /* grid-gap: 1rem; */
   padding: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
-
   border-radius: 10px;
+}
 
-  /* align-items: center; */
-}
-.camp h2{
-  /* font-size: 3rem; */
-}
+
 .camp_image{
   overflow: hidden;
   border-radius: 10px;
@@ -142,7 +128,6 @@ header{
   -o-transition: .3s;
 }
 .view_Camp_button:hover{
-  /* width: 100%; */
   background-color: #111;
   color: #fff;
   border: 1px solid #fff;
@@ -164,3 +149,99 @@ header{
 .add_comment_submit{
   width: 100%;
 }
+
+
+
+
+/* Style for responsive header Nav-Bar */
+
+
+
+.hamburger_div{
+  display: none;
+}
+
+
+
+
+/* Responsive */
+
+@media(max-width:1100px){
+  html{
+    font-size: 55%;
+  }
+}
+
+@media(max-width:900px){
+  .container{
+      width: 90%;
+  }
+}
+
+@media(max-width:760px){
+  html{
+    font-size: 50%;
+  }
+  .container{
+    width: 95%;
+}
+
+
+
+.nav{
+  align-items: flex-start;
+}
+nav .nav_right{
+    height: 100vh ;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0px;
+    width: 250px;
+    z-index: 50;
+    right: 0px;
+    transform:translateX(100%) ;
+    transition: .3s linear;
+    -webkit-transform:translateX(100%) ;
+    -moz-transform:translateX(100%) ;
+    -ms-transform:translateX(100%) ;
+    -o-transform:translateX(100%) ;
+    -webkit-transition: .3s linear;
+    -moz-transition: .3s linear;
+    -ms-transition: .3s linear;
+    -o-transition: .3s linear;
+}
+nav .nav_right a{
+  font-size: 30px;
+  color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+.hambergur{
+  z-index: 100;
+  align-self: center;
+}
+.hamburger_div{
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px !important;
+}
+
+  
+
+}
+
+@media(max-width:450px){
+  html{
+    font-size: 45%;
+  }
+  .button{
+    height:5.5rem
+  }
+}
+

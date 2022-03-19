@@ -20,10 +20,10 @@ function AddComment() {
         <Header/>
             <div className="  flex flex-col justify-center items-center comment">
                 <h1 className='text-5xl text-center font-bold'>Add new comment</h1>
-                <div className='w-1/3 flex justify-start'>
+                <div className='lg:w-1/3 w-11/12 md:w-2/3 flex justify-start'>
                 <p className=' my-4 mt-12 text-4xl justify-start'>Description</p>
                 </div>
-                <form className='w-1/3'>
+                <form className='lg:w-1/3 w-11/12 md:w-2/3' >
 
                 <textarea placeholder='Write comment' className='m-auto h-80 w-full  p-8 text-4xl bg-gray-300'></textarea>
                 <button onClick={submit} className="button add_comment_submit mt-12">Submit</button>

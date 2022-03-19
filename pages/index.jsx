@@ -12,11 +12,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <div className="left flex flex-col">
-          <div className="logo">
+      < header className="flex flex-col lg:flex-row">
+          <div className="container lg:pl-64 md:pl-40 sm:pl-20 pl-16  logo">
             <Image src="/Logo.svg" alt="Logo" width={110} height={110} />
           </div>
+        <div className="left lg:pl-64 md:pl-40 sm:pl-20 pl-16 order-2 lg:-order-10 w-full lg:w-2/4 flex flex-col">
           <div className="heading pr-24 mt-40   ">
             <h1 className="text-9xl font-bold">
               Explore the best camps on Earth
@@ -57,7 +57,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="right">
+        <div className="order-1 mt-52   lg:mt-0 right w-full lg:w-2/4">
           <img src="/Hero Image.jpg" alt="Image" />
         </div>
       </header>

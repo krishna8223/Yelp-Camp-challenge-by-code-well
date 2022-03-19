@@ -18,7 +18,7 @@ function AddNewCamp() {
                 <ProjectDetail />
                 <Header />
 
-            <div className=" w-2/5 m-auto add">
+            <div className=" lg:w-2/5 md:w-3/5 w-11/12 m-auto add">
                 <h1 className='font-bold text-6xl'>Add new Campground</h1>
                 <form className='flex flex-col mt-8'>
                     <label className='text-4xl mt-12 text-gray-500' htmlFor="">Campground Name</label>
